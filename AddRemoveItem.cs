@@ -8,11 +8,20 @@ using System.Windows.Forms;
 
 namespace Project_PRG281
 {
-    public partial class Remove_Item : Form
+    public partial class AddRemoveItem : Form
     {
-        public Remove_Item()
+        public AddRemoveItem()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddRemoveItem addRemoveItem = new AddRemoveItem();
+            Menu menu = new Menu();
+            menu.Show();
+            addRemoveItem.Hide();
+            this.Hide();
         }
     }
 }

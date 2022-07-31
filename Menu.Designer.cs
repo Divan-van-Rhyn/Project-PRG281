@@ -104,6 +104,7 @@ namespace Project_PRG281
             this.butNewOrder.Name = "butNewOrder";
             this.butNewOrder.Size = new System.Drawing.Size(1439, 25);
             this.butNewOrder.Text = "New Order";
+            this.butNewOrder.Click += new System.EventHandler(this.butNewOrder_Click);
             // 
             // toolStripSeparator2
             // 
@@ -120,6 +121,7 @@ namespace Project_PRG281
             this.butUpdateStock.Name = "butUpdateStock";
             this.butUpdateStock.Size = new System.Drawing.Size(1439, 25);
             this.butUpdateStock.Text = "Update Stock";
+            this.butUpdateStock.Click += new System.EventHandler(this.butUpdateStock_Click);
             // 
             // toolStripSeparator3
             // 
@@ -136,6 +138,7 @@ namespace Project_PRG281
             this.butAddRemove.Name = "butAddRemove";
             this.butAddRemove.Size = new System.Drawing.Size(1439, 25);
             this.butAddRemove.Text = "Add/Remove Item";
+            this.butAddRemove.Click += new System.EventHandler(this.butAddRemove_Click);
             // 
             // toolStripSeparator4
             // 
@@ -152,6 +155,7 @@ namespace Project_PRG281
             this.butRecordSales.Name = "butRecordSales";
             this.butRecordSales.Size = new System.Drawing.Size(1439, 25);
             this.butRecordSales.Text = "Record Sales";
+            this.butRecordSales.Click += new System.EventHandler(this.butRecordSales_Click);
             // 
             // toolStripSeparator5
             // 
@@ -168,6 +172,7 @@ namespace Project_PRG281
             this.butDisplaySales.Name = "butDisplaySales";
             this.butDisplaySales.Size = new System.Drawing.Size(1439, 25);
             this.butDisplaySales.Text = "Display Sales";
+            this.butDisplaySales.Click += new System.EventHandler(this.butDisplaySales_Click);
             // 
             // toolStripSeparator6
             // 
@@ -185,6 +190,7 @@ namespace Project_PRG281
             this.butLogOut.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.butLogOut.Size = new System.Drawing.Size(1439, 45);
             this.butLogOut.Text = "Log Out";
+            this.butLogOut.Click += new System.EventHandler(this.butLogOut_Click);
             // 
             // toolStripSeparator7
             // 

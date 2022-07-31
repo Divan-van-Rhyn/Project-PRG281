@@ -1935,6 +1935,7 @@ namespace Project_PRG281
             this.butCheckout.TabIndex = 11;
             this.butCheckout.Text = "Checkout";
             this.butCheckout.UseVisualStyleBackColor = true;
+            this.butCheckout.Click += new System.EventHandler(this.butCheckout_Click);
             // 
             // butCancel
             // 
@@ -1945,6 +1946,7 @@ namespace Project_PRG281
             this.butCancel.TabIndex = 12;
             this.butCancel.Text = "Cancel Order";
             this.butCancel.UseVisualStyleBackColor = true;
+            this.butCancel.Click += new System.EventHandler(this.butCancel_Click);
             // 
             // panel2
             // 

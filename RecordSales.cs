@@ -14,5 +14,14 @@ namespace Project_PRG281
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            RecordSales recordSales = new RecordSales();
+            menu.Show();
+            recordSales.Hide();
+            this.Hide();
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Project_PRG281
 {
-    partial class Remove_Item
+    partial class AddRemoveItem
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,6 @@ namespace Project_PRG281
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,6 +116,7 @@ namespace Project_PRG281
             this.button2.TabIndex = 26;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -154,16 +154,6 @@ namespace Project_PRG281
             this.textBox2.Size = new System.Drawing.Size(243, 29);
             this.textBox2.TabIndex = 40;
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(1045, 511);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 41);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -174,14 +164,13 @@ namespace Project_PRG281
             this.button4.Text = "Add Item";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // Remove_Item
+            // AddRemoveItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 1041);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -192,7 +181,7 @@ namespace Project_PRG281
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Remove_Item";
+            this.Name = "AddRemoveItem";
             this.Text = "Remove_Item";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -215,7 +204,6 @@ namespace Project_PRG281
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }
 }

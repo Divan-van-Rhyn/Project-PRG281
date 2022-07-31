@@ -19,5 +19,14 @@ namespace Project_PRG281
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddOrder addOrder = new AddOrder();
+            DisplaySales displaySales = new DisplaySales();
+            addOrder.Show();
+            displaySales.Hide();
+            this.Hide();
+        }
     }
 }
