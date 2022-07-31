@@ -7,7 +7,7 @@ using System.Text;
 namespace Project_PRG281.DataService.Models
 {
     [Table("Sales")]
-    class SalesData
+    public class SalesData
     {
         [Key]
         [Required]
@@ -16,7 +16,14 @@ namespace Project_PRG281.DataService.Models
         [Required]
         public int ProductID { get; set; }
 
+        public ProductData Product { get; set; }
+
         [Required]
         public int UserID { get; set; }
+
+        public LoginData User { get; set; }
+
+        [Required]
+        public int Quantity { get; set; }
     }
 }

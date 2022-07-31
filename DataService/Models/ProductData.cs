@@ -19,5 +19,7 @@ namespace Project_PRG281.DataService.Models
 
         [Required]
         public double Price { get; set; }
+
+        public ICollection<SalesData> Sales { get; set; }
     }
 }
