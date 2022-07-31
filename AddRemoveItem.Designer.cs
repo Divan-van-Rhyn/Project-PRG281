@@ -106,6 +106,7 @@ namespace Project_PRG281
             this.button1.TabIndex = 25;
             this.button1.Text = "Remove Item";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -163,8 +164,9 @@ namespace Project_PRG281
             this.button4.TabIndex = 38;
             this.button4.Text = "Add Item";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // AddRemoveItem
+            // Remove_Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +183,7 @@ namespace Project_PRG281
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "AddRemoveItem";
+            this.Name = "Remove_Item";
             this.Text = "Remove_Item";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

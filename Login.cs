@@ -31,8 +31,10 @@ namespace Project_PRG281
             }
 
             Menu menu = new Menu();
-            menu.Show();
             this.Hide();
+            menu.ShowDialog();
+            this.Show();
         }
+
     }
 }

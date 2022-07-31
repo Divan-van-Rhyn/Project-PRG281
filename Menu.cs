@@ -38,55 +38,47 @@ namespace Project_PRG281
         private void butNewOrder_Click(object sender, EventArgs e)
         {
             AddOrder addOrder = new AddOrder();
-            Menu menu = new Menu();
-            addOrder.Show();
-            menu.Hide();
             this.Hide();
+            addOrder.ShowDialog();
+            this.Show();
         }
 
         private void butUpdateStock_Click(object sender, EventArgs e)
         {
             UpdateStock updateStock = new UpdateStock();
-            Menu menu = new Menu();
-            updateStock.Show();
-            menu.Hide();
             this.Hide();
+            updateStock.ShowDialog();
+            this.Show();
         }
 
         private void butAddRemove_Click(object sender, EventArgs e)
         {
             AddRemoveItem addRemoveItem = new AddRemoveItem();
-            Menu menu = new Menu();
-            addRemoveItem.Show();
-            menu.Hide();
             this.Hide();
+            addRemoveItem.ShowDialog();
+            this.Show();
         }
 
         private void butRecordSales_Click(object sender, EventArgs e)
         {
             RecordSales recordSales = new RecordSales();
-            Menu menu = new Menu();
-            recordSales.Show();
-            menu.Hide();
             this.Hide();
+            recordSales.ShowDialog();
+            this.Show();
+
         }
 
         private void butDisplaySales_Click(object sender, EventArgs e)
         {
             DisplaySales displaySales = new DisplaySales();
-            Menu menu = new Menu();
-            displaySales.Show();
-            menu.Hide();
             this.Hide();
+            displaySales.ShowDialog();
+            this.Show();
         }
 
         private void butLogOut_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            Menu menu = new Menu();
-            login.Show();
-            menu.Hide();
-            this.Hide();
+            this.Close();
         }
     }
 }

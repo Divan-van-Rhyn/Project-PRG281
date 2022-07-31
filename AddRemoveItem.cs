@@ -15,13 +15,19 @@ namespace Project_PRG281
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            AddRemoveItem addRemoveItem = new AddRemoveItem();
-            Menu menu = new Menu();
-            menu.Show();
-            addRemoveItem.Hide();
-            this.Hide();
+
         }
     }
 }
