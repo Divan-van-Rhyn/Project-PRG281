@@ -150,9 +150,11 @@ namespace Project_PRG281
             this.butCancel.TabIndex = 9;
             this.butCancel.Text = "Cancel";
             this.butCancel.UseVisualStyleBackColor = true;
+            this.butCancel.Click += new System.EventHandler(this.butCancel_Click);
             // 
             // Login
             // 
+            this.AcceptButton = this.butLogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 703);

@@ -36,5 +36,9 @@ namespace Project_PRG281
             this.Show();
         }
 
+        private void butCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
