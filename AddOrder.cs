@@ -38,12 +38,17 @@ namespace Project_PRG281
         private void butCheckout_Click(object sender, EventArgs e)
         {
             DisplaySales displaySales = new DisplaySales();
-            displaySales.Show();
+            DialogResult result = displaySales.ShowDialog();
+            
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void butCancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

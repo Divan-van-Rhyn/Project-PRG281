@@ -20,13 +20,16 @@ namespace Project_PRG281
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            AddOrder addOrder = new AddOrder();
-            DisplaySales displaySales = new DisplaySales();
-            addOrder.Show();
-            displaySales.Hide();
-            this.Hide();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

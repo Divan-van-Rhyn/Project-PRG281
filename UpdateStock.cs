@@ -15,13 +15,14 @@ namespace Project_PRG281
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            UpdateStock updateStock = new UpdateStock();
-            menu.Show();
-            updateStock.Hide();
-            this.Hide();
+            this.Close();
         }
     }
 }
