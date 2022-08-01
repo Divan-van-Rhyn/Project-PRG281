@@ -50,7 +50,7 @@ namespace Project_PRG281
                            {"Hot Chocolate","17"}
 
 
-                        }
+                        };
         }
     }
 }
