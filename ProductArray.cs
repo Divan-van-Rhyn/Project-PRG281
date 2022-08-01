@@ -1,56 +1,69 @@
-﻿using System;
+﻿using Microsoft.Azure.Amqp.Framing;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Project_PRG281
 {
-    class ProductArray
+    public class ProductMenu
     {
-        public void Product()
+
+        public string removeItem { get; set; }
+
+        public static void ImportText()
         {
-            string[,] ProductMenu = new string[,]
-                        {
-                           {"Small Chips","11"},
-                           {"Medium Chips","18"},
-                           {"Beef Burger","30"},
-                           {"Beef Burger + Small Chips","40"},
-                           {"Beef Burger + Medium Chips","47"},
-                           {"Chicken Burger","30"},
-                           {"Chicken Burger + Small Chips","40"},
-                           {"Chicken Burger + Medium Chips","47"},
-                           {"Toasted Cheese","13"},
-                           {"Toasted Tomato + Cheese","18"},
-                           {"Toasted Ham + Cheese","22"},
-                           {"Toasted Ham + Tomato + Cheese","26"},
-                           {"Braaibroodjie","20"},
-                           {"Toasted Chicken Mayo","26"},
-                           {"Plat Anna","30"},
-                           {"Barber","45"},
-                           {"Supreme Toast","26"},
-                           {"Chicken Strips","28"},
-                           {"Chicken Strips + Small Chips","38"},
-                           {"Chicken Strips + Medium Chips","45"},
-                           {"Russian Long","15"},
-                           {"Russian Roll","22"},
-                           {"Russian + Medium Chips","32"},
-                           {"Footlong","26"},
-                           {"Extra Cheese","6"},
-                           {"Extra Meat","17"},
-                           {"Extra Ham","8"},
-                           {"440ml Assorted","16"},
-                           {"500ml Water","8"},
-                           {"500ml Flavoured Water","15"},
-                           {"500ml Energade","15"},
-                           {"500ml Switch/Dragon/Real","13"},
-                           {"500ml Monster","23"},
-                           {"300ml Red Bull","25"},
-                           {"Ice Cappucino","17"},
-                           {"Cappucino","17"},
-                           {"Red Cappucino","17"},
-                           {"Hot Chocolate","17"}
 
+            string filePath = @"C:\Project PRG281\TextFiles\BCMenu.txt";
 
-                        };
+            string[] textFileProducts;
+            textFileProducts = File.ReadAllLines(filePath);
+
+            //pName = new string[textFileProducts.Length];
+            // pPrice = new string[textFileProducts.Length];
+            List<string> product = new List<string>(File.ReadAllLines(filePath));
+            List<string> productName = new List<string>();
+            //productName = File.ReadAllLines(filePath);
+            //List<double> productPrice = new List<double>();
+
+            
         }
+
+        public void RemovingItem(List<string> product, string filePath)
+        {
+            product.Sort();
+            int productPosition = product.BinarySearch(removeItem);
+            product.RemoveAt(productPosition);
+
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                foreach (var Item in product)
+                {
+                    writer.WriteLine(Item);
+                }
+            }
+           // product = new List<string>(File.AppendAllLinesAsync(filePath));
+        }
+        public void AddingItem() 
+        { 
+        
+        }
+       public void UpdatingItem()
+        {
+
+        }
+        public void PlacingOrder()
+        {
+
+        }
+        public void RecordingSale()
+        {
+
+        }
+        public void DisplayingSale()
+        {
+
+        }
+        
     }
 }

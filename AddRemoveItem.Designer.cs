@@ -35,13 +35,14 @@ namespace Project_PRG281
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butRemove = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.itemRemoveTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.itemAddTextBox = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -97,16 +98,16 @@ namespace Project_PRG281
             this.richTextBox1.TabIndex = 24;
             this.richTextBox1.Text = "";
             // 
-            // button1
+            // butRemove
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(845, 577);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 41);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Remove Item";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.butRemove.Location = new System.Drawing.Point(824, 577);
+            this.butRemove.Name = "butRemove";
+            this.butRemove.Size = new System.Drawing.Size(132, 41);
+            this.butRemove.TabIndex = 25;
+            this.butRemove.Text = "Remove Item";
+            this.butRemove.UseVisualStyleBackColor = true;
+            this.butRemove.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -119,13 +120,13 @@ namespace Project_PRG281
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // itemRemoveTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(505, 584);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 29);
-            this.textBox1.TabIndex = 27;
+            this.itemRemoveTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.itemRemoveTextBox.Location = new System.Drawing.Point(505, 584);
+            this.itemRemoveTextBox.Name = "itemRemoveTextBox";
+            this.itemRemoveTextBox.Size = new System.Drawing.Size(243, 29);
+            this.itemRemoveTextBox.TabIndex = 27;
             // 
             // label1
             // 
@@ -147,18 +148,18 @@ namespace Project_PRG281
             this.label2.TabIndex = 41;
             this.label2.Text = "Type item to add:";
             // 
-            // textBox2
+            // itemAddTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(505, 518);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 29);
-            this.textBox2.TabIndex = 40;
+            this.itemAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.itemAddTextBox.Location = new System.Drawing.Point(505, 518);
+            this.itemAddTextBox.Name = "itemAddTextBox";
+            this.itemAddTextBox.Size = new System.Drawing.Size(243, 29);
+            this.itemAddTextBox.TabIndex = 40;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(845, 511);
+            this.button4.Location = new System.Drawing.Point(1045, 511);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 41);
             this.button4.TabIndex = 38;
@@ -166,24 +167,33 @@ namespace Project_PRG281
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Remove_Item
+            // priceTextBox
+            // 
+            this.priceTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.priceTextBox.Location = new System.Drawing.Point(794, 518);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(183, 29);
+            this.priceTextBox.TabIndex = 42;
+            // 
+            // AddRemoveItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 1041);
+            this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.itemAddTextBox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.itemRemoveTextBox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.butRemove);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Remove_Item";
+            this.Name = "AddRemoveItem";
             this.Text = "Remove_Item";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -200,12 +210,13 @@ namespace Project_PRG281
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butRemove;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox itemRemoveTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox itemAddTextBox;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox priceTextBox;
     }
 }

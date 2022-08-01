@@ -10,14 +10,18 @@ namespace Project_PRG281
 {
     public partial class AddRemoveItem : Form
     {
+
+        string removeItem;
+
         public AddRemoveItem()
         {
             InitializeComponent();
+            string removeItem;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void button1_Click(object sender, EventArgs e, string removeItem)
         {
-
+            removeItem = itemRemoveTextBox.Text;
         }
 
         private void button4_Click(object sender, EventArgs e)

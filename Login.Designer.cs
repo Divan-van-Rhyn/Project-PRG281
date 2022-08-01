@@ -139,7 +139,7 @@ namespace Project_PRG281
             this.butLogIn.TabIndex = 8;
             this.butLogIn.Text = "Log In";
             this.butLogIn.UseVisualStyleBackColor = true;
-            this.butLogIn.Click += new System.EventHandler(this.butLogIn_Click);
+            this.butLogIn.Click += new System.EventHandler(this.butLogIn_Click_1);
             // 
             // butCancel
             // 
