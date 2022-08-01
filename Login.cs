@@ -16,19 +16,18 @@ namespace Project_PRG281
         public Login()
         {
             InitializeComponent();
+            string[,] Logins = new string[,]
+                 {
+                   {"Admin","123"},
+                   {"Ackley","ackley246"},
+                   {"John","mypassword"},
+                   {"Rian","donotknow"}
+                  };
         }
 
         private void butLogIn_Click(object sender, EventArgs e)
         {
-            ProjectDataContext projectDataContext = new ProjectDataContext();
 
-            var login = projectDataContext.Logins.FirstOrDefault(x => x.Username == this.usernameTextBox.Text && x.Password == passwordTextBox.Text);
-
-            if (login == null)
-            {
-                MessageBox.Show("Wrong password or username");
-                return;
-            }
 
             Menu menu = new Menu();
             this.Hide();
