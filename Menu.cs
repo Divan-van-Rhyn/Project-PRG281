@@ -45,10 +45,10 @@ namespace Project_PRG281
 
         private void butUpdateStock_Click(object sender, EventArgs e)
         {
-            UpdateStock updateStock = new UpdateStock();
-            this.Hide();
-            updateStock.ShowDialog();
-            this.Show();
+            //UpdateStock updateStock = new UpdateStock();
+            //this.Hide();
+            //updateStock.ShowDialog();
+            //this.Show();
         }
 
         private void butAddRemove_Click(object sender, EventArgs e)
@@ -61,10 +61,10 @@ namespace Project_PRG281
 
         private void butRecordSales_Click(object sender, EventArgs e)
         {
-            RecordSales recordSales = new RecordSales();
-            this.Hide();
-            recordSales.ShowDialog();
-            this.Show();
+            //RecordSales recordSales = new RecordSales();
+            //this.Hide();
+            //recordSales.ShowDialog();
+            //this.Show();
 
         }
 

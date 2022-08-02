@@ -73,6 +73,7 @@ namespace Project_PRG281
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(549, 450);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.PlaceholderText = "Password";
             this.passwordTextBox.Size = new System.Drawing.Size(169, 23);
             this.passwordTextBox.TabIndex = 2;

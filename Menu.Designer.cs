@@ -31,29 +31,25 @@ namespace Project_PRG281
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuToolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.butNewOrder = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.butUpdateStock = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.butAddRemove = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.butRecordSales = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.butDisplaySales = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.butLogOut = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.butNewOrder = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.butAddRemove = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.butDisplaySales = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.butLogOut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuToolStrip = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuToolStrip.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -65,137 +61,6 @@ namespace Project_PRG281
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // menuToolStrip
-            // 
-            this.menuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.butNewOrder,
-            this.toolStripSeparator2,
-            this.butUpdateStock,
-            this.toolStripSeparator3,
-            this.butAddRemove,
-            this.toolStripSeparator4,
-            this.butRecordSales,
-            this.toolStripSeparator5,
-            this.butDisplaySales,
-            this.toolStripSeparator6,
-            this.butLogOut,
-            this.toolStripSeparator7});
-            this.menuToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuToolStrip.Name = "menuToolStrip";
-            this.menuToolStrip.Size = new System.Drawing.Size(1441, 397);
-            this.menuToolStrip.TabIndex = 2;
-            this.menuToolStrip.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(1439, 6);
-            // 
-            // butNewOrder
-            // 
-            this.butNewOrder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.butNewOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butNewOrder.Image = ((System.Drawing.Image)(resources.GetObject("butNewOrder.Image")));
-            this.butNewOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.butNewOrder.Name = "butNewOrder";
-            this.butNewOrder.Size = new System.Drawing.Size(1439, 25);
-            this.butNewOrder.Text = "New Order";
-            this.butNewOrder.Click += new System.EventHandler(this.butNewOrder_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(1439, 6);
-            // 
-            // butUpdateStock
-            // 
-            this.butUpdateStock.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.butUpdateStock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butUpdateStock.Image = ((System.Drawing.Image)(resources.GetObject("butUpdateStock.Image")));
-            this.butUpdateStock.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.butUpdateStock.Name = "butUpdateStock";
-            this.butUpdateStock.Size = new System.Drawing.Size(1439, 25);
-            this.butUpdateStock.Text = "Update Stock";
-            this.butUpdateStock.Click += new System.EventHandler(this.butUpdateStock_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(1439, 6);
-            // 
-            // butAddRemove
-            // 
-            this.butAddRemove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.butAddRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butAddRemove.Image = ((System.Drawing.Image)(resources.GetObject("butAddRemove.Image")));
-            this.butAddRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.butAddRemove.Name = "butAddRemove";
-            this.butAddRemove.Size = new System.Drawing.Size(1439, 25);
-            this.butAddRemove.Text = "Add/Remove Item";
-            this.butAddRemove.Click += new System.EventHandler(this.butAddRemove_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(1439, 6);
-            // 
-            // butRecordSales
-            // 
-            this.butRecordSales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.butRecordSales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butRecordSales.Image = ((System.Drawing.Image)(resources.GetObject("butRecordSales.Image")));
-            this.butRecordSales.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.butRecordSales.Name = "butRecordSales";
-            this.butRecordSales.Size = new System.Drawing.Size(1439, 25);
-            this.butRecordSales.Text = "Record Sales";
-            this.butRecordSales.Click += new System.EventHandler(this.butRecordSales_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(1439, 6);
-            // 
-            // butDisplaySales
-            // 
-            this.butDisplaySales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.butDisplaySales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butDisplaySales.Image = ((System.Drawing.Image)(resources.GetObject("butDisplaySales.Image")));
-            this.butDisplaySales.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.butDisplaySales.Name = "butDisplaySales";
-            this.butDisplaySales.Size = new System.Drawing.Size(1439, 25);
-            this.butDisplaySales.Text = "Display Sales";
-            this.butDisplaySales.Click += new System.EventHandler(this.butDisplaySales_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(1439, 6);
-            // 
-            // butLogOut
-            // 
-            this.butLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.butLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butLogOut.Image = ((System.Drawing.Image)(resources.GetObject("butLogOut.Image")));
-            this.butLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.butLogOut.Name = "butLogOut";
-            this.butLogOut.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.butLogOut.Size = new System.Drawing.Size(1439, 45);
-            this.butLogOut.Text = "Log Out";
-            this.butLogOut.Click += new System.EventHandler(this.butLogOut_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(1439, 6);
             // 
             // panel2
             // 
@@ -240,6 +105,99 @@ namespace Project_PRG281
             this.panel7.Size = new System.Drawing.Size(150, 889);
             this.panel7.TabIndex = 1;
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(1439, 6);
+            // 
+            // butNewOrder
+            // 
+            this.butNewOrder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.butNewOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.butNewOrder.Image = ((System.Drawing.Image)(resources.GetObject("butNewOrder.Image")));
+            this.butNewOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.butNewOrder.Name = "butNewOrder";
+            this.butNewOrder.Size = new System.Drawing.Size(1439, 25);
+            this.butNewOrder.Text = "New Order";
+            this.butNewOrder.Click += new System.EventHandler(this.butNewOrder_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(1439, 6);
+            // 
+            // butAddRemove
+            // 
+            this.butAddRemove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.butAddRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.butAddRemove.Image = ((System.Drawing.Image)(resources.GetObject("butAddRemove.Image")));
+            this.butAddRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.butAddRemove.Name = "butAddRemove";
+            this.butAddRemove.Size = new System.Drawing.Size(1439, 25);
+            this.butAddRemove.Text = "Add + Remove + Update";
+            this.butAddRemove.Click += new System.EventHandler(this.butAddRemove_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(1439, 6);
+            // 
+            // butDisplaySales
+            // 
+            this.butDisplaySales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.butDisplaySales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.butDisplaySales.Image = ((System.Drawing.Image)(resources.GetObject("butDisplaySales.Image")));
+            this.butDisplaySales.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.butDisplaySales.Name = "butDisplaySales";
+            this.butDisplaySales.Size = new System.Drawing.Size(1439, 25);
+            this.butDisplaySales.Text = "Display Sales";
+            this.butDisplaySales.Click += new System.EventHandler(this.butDisplaySales_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(1439, 6);
+            // 
+            // butLogOut
+            // 
+            this.butLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.butLogOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.butLogOut.Image = ((System.Drawing.Image)(resources.GetObject("butLogOut.Image")));
+            this.butLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.butLogOut.Name = "butLogOut";
+            this.butLogOut.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.butLogOut.Size = new System.Drawing.Size(1439, 45);
+            this.butLogOut.Text = "Log Out";
+            this.butLogOut.Click += new System.EventHandler(this.butLogOut_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(1439, 6);
+            // 
+            // menuToolStrip
+            // 
+            this.menuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.butNewOrder,
+            this.toolStripSeparator2,
+            this.butAddRemove,
+            this.toolStripSeparator4,
+            this.butDisplaySales,
+            this.toolStripSeparator6,
+            this.butLogOut,
+            this.toolStripSeparator7});
+            this.menuToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuToolStrip.Name = "menuToolStrip";
+            this.menuToolStrip.Size = new System.Drawing.Size(1441, 272);
+            this.menuToolStrip.TabIndex = 2;
+            this.menuToolStrip.Text = "toolStrip1";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -254,10 +212,10 @@ namespace Project_PRG281
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuToolStrip.ResumeLayout(false);
-            this.menuToolStrip.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.menuToolStrip.ResumeLayout(false);
+            this.menuToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,24 +224,20 @@ namespace Project_PRG281
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStrip menuToolStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton butNewOrder;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton butUpdateStock;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton butAddRemove;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton butRecordSales;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton butDisplaySales;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton butNewOrder;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton butAddRemove;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton butDisplaySales;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton butLogOut;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStrip menuToolStrip;
     }
 }

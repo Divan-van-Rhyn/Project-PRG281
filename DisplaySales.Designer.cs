@@ -48,7 +48,7 @@ namespace Project_PRG281
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 41);
             this.button2.TabIndex = 35;
-            this.button2.Text = "Return To Order ";
+            this.button2.Text = "Return to menu";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -59,9 +59,9 @@ namespace Project_PRG281
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 41);
             this.button1.TabIndex = 34;
-            this.button1.Text = "Finalize Order";
+            this.button1.Text = "Display Sales";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // richTextBox1
             // 
@@ -128,7 +128,7 @@ namespace Project_PRG281
             this.Controls.Add(this.pictureBox1);
             this.Name = "DisplaySales";
             this.Text = "AddItem";
-            this.Load += new System.EventHandler(this.AddItem_Load);
+            this.Load += new System.EventHandler(this.DisplaySales_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
