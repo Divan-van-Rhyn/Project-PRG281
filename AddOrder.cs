@@ -11,7 +11,7 @@ namespace Project_PRG281
 {
     public partial class AddOrder : Form
     {
-
+        //publicly declared variables and lists that we use throughout the class
         public int finalPrice = 0;
         public List<string> receipt = new List<string>();
         public string salesFilePath = @"C:\Project PRG281\TextFiles\Sales.txt";
@@ -21,7 +21,6 @@ namespace Project_PRG281
         public AddOrder()
         {
             InitializeComponent();
-            richTextBox1.SelectionTabs = new int[] { 100, 200, 300 };
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -46,11 +45,12 @@ namespace Project_PRG281
 
         private void butCheckout_Click(object sender, EventArgs e)
         {
+            //Streamwriter writes to the textfile where the current sale is being stored
             File.WriteAllText(salesFilePath, string.Empty);
-            // using (StreamWriter writer = File.AppendText(salesFilePath))
             using (StreamWriter writer = new StreamWriter(salesFilePath, true))
             {
                 writer.WriteLine("------------------------------------------------------");
+                //for loop runs throughall the elements in the list and writes them to the textfile
                 for (int i = 0; i < receipt.Count; i++)
                 {
                     string theProducts = (receipt[i]);
@@ -61,15 +61,20 @@ namespace Project_PRG281
                 writer.WriteLine("------------------------------------------------------");
             }
 
+            //Declare a variable that stores the string form the text file 
             string content = File.ReadAllText(salesFilePath);
+            //adds to textfile
             File.AppendAllText(allSalesPath, content);
 
+            //Indication of success upon completion
             MessageBox.Show("Checkout Succesfull", "SUCCESS");
+            //Closes form
             this.Close();
         }
 
         private void butCancel_Click(object sender, EventArgs e)
         {
+            //closes current form and brings back previous form that is the menu
             this.Close();
         }
 
@@ -77,7 +82,8 @@ namespace Project_PRG281
         {
            
         }
-
+        //Validates what products is selected and adds them to receipt
+        //If statements is used to checked if a checked checkbox is unchecked before reviewing order
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox9.Checked)
@@ -232,7 +238,7 @@ namespace Project_PRG281
         {
 
         }
-
+        
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox11.Checked)
@@ -414,7 +420,7 @@ namespace Project_PRG281
 
             
         }
-
+        // Once this button is clicked the order can be review on the richtextbox
         private void button1_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < receipt.Count; i++)

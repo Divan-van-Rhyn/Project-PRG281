@@ -11,17 +11,21 @@ namespace Project_PRG281
     {
 
         public string removeItem { get; set; }
-
+        //publicly declared variables, lists and arrays that will be used in the class
+        //list that will store the product name after textfile has been split
         public List<string> productName = new List<string>();
+        //list that will store the product price after textfile has been split
         public List<string> productPrice = new List<string>();
+        //string variables that stores file paths to textfiles
         public string addedfilePath = @"C:\Project PRG281\TextFiles\AddedProducts.txt";
         public string productDisplayFilePath = @"C:\Project PRG281\TextFiles\BCMenu.txt";
         public string updatedDisplayProductPath = @"C:\Project PRG281\TextFiles\UpdatedMenu.txt";
         public string[] textFileProducts;
 
+        //This method is used to import the text inc
         public void ImportText()
         {
-
+            
             
             int textFileLength;
             int splitLength;
@@ -55,8 +59,10 @@ namespace Project_PRG281
             }  
         }
 
+        //Method that exports textfile 
         public void ExportText()
         {
+            //uses streamwriter to write to textfile
             File.WriteAllText(addedfilePath, string.Empty);
             using (StreamWriter writer = File.AppendText(addedfilePath))
             {
@@ -70,6 +76,8 @@ namespace Project_PRG281
 
         public void CombineTextFiles()
         {
+            //Was supposed to allow us to merge 2 textfiles together
+
             string[] originalTextFile = File.ReadAllLines(productDisplayFilePath);
             string[] addedToTextFile = File.ReadAllLines(addedfilePath);
 
@@ -94,50 +102,10 @@ namespace Project_PRG281
             
         }
 
-
+        //This method is used to remove a product from the menu
         public void RemovingProduct(string productNames)
         {
-            //AddRemoveItem addRemoveItem = new AddRemoveItem();
-
-            //List<string> productList = File.ReadAllLines(updatedDisplayProductPath).ToList();
-
-            //if ((productNames != null) || (productNames != ""))
-            //{
-            //    int locating = productList.IndexOf(productNames);
-            //    productName.RemoveAt(locating);
-            //    productPrice.RemoveAt(locating);
-            //    System.Windows.Forms.MessageBox.Show("Product has succesfully been removed", "COMPLETED");
-            //}
-            //else
-            //{
-            //    System.Windows.Forms.MessageBox.Show("Product has unsuccesfully been removed", "COMPLETED");
-            //}
-
-            //string[] menuArray = System.IO.File.ReadAllLines(updatedDisplayProductPath);
-            //for (int i = 0; i < menuArray.Length; i++)
-            //{
-            //    if (menuArray[i] == (productNames + productPrice))
-            //    {
-            //        menuArray.splice(i);
-            //    }
-            //}
-
-            //menuArray = menuArray.Where(e => e != productNames).ToArray();
-            //Console.WriteLine(String.Join(",", menuArray));
-
-            //List<string> removedList = menuArray.ToList<string>();
-
-            //using (StreamWriter writer = File.AppendText(@"C:\Project PRG281\TextFiles\UpdatedMenu.txt"))
-            //{
-            //    for (int i = 0; i < removedList.Count; i++)
-            //    {
-            //        writer.WriteLine(removedList[i]);
-            //    }
-            //}
-
-            //System.Windows.Forms.MessageBox.Show("Product has succesfully been removed", "COMPLETED");
-
-
+            //code we got from https://www.c-sharpcorner.com/blogs/read-write-and-delete-the-text-file-content-using-c-sharp
             var oldLines = System.IO.File.ReadAllLines(updatedDisplayProductPath);
             var newLines = oldLines.Where(line => !line.Contains(productNames));
             System.IO.File.WriteAllLines(updatedDisplayProductPath, newLines);
@@ -146,10 +114,13 @@ namespace Project_PRG281
 
 
         }
+
+        //this method allows us to add a product to a textfile 
         public void AddingProduct(string nameOfProduct, string priceOfProduct) 
         {
             if (((nameOfProduct != null) || (nameOfProduct != "")) && ((priceOfProduct != null) || (priceOfProduct != "")))
             {
+                //try catch to see if product has been added successfully
                 try
                 {
                     productName.Add(nameOfProduct);
@@ -164,6 +135,8 @@ namespace Project_PRG281
                 }
             }
         }
+
+        //method that updates the productname
        public void UpdatingProductName(string originalName, string updatedName)
         {
             if(((originalName !=null)|| (originalName != " ")) && ((updatedName !=null)|| (updatedName !=" ")))
@@ -179,10 +152,14 @@ namespace Project_PRG281
                 }
             }
         }
+
+        //method that updates product price
         public void UpdatingProductPrice(string originalName, string updatedPrice)
         {
+            //tests to see if the original name and price can be found in text file
             if (((originalName != null) || (originalName != "")) && ((updatedPrice != null) || (updatedPrice != "")))
             {
+                //finds the index of item in list
                 int indexing = productName.IndexOf(originalName);
                 productPrice[indexing] = updatedPrice;
             }
