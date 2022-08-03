@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Project_PRG281
@@ -15,7 +16,7 @@ namespace Project_PRG281
         public List<string> productPrice = new List<string>();
         public string addedfilePath = @"C:\Project PRG281\TextFiles\AddedProducts.txt";
         public string productDisplayFilePath = @"C:\Project PRG281\TextFiles\BCMenu.txt";
-        public string updatedDisplayProductPath = @"C\Project PRG281\TextFiles\UpdatedMenu.txt";
+        public string updatedDisplayProductPath = @"C:\Project PRG281\TextFiles\UpdatedMenu.txt";
         public string[] textFileProducts;
 
         public void ImportText()
@@ -96,11 +97,18 @@ namespace Project_PRG281
 
         public void RemovingProduct(string productNames)
         {
-          if((productNames != null)|| (productNames !=""))
+            List<string> productList = File.ReadAllLines(updatedDisplayProductPath).ToList();
+
+            if ((productNames != null) || (productNames != ""))
             {
                 int locating = productName.IndexOf(productNames);
-                productName.RemoveAt(locating);
-                productPrice.RemoveAt(locating);
+                productName.Remove(productNames);
+                //productPrice.RemoveAt(locating);
+                System.Windows.Forms.MessageBox.Show("Product has succesfully been removed", "COMPLETED");
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Product has unsuccesfully been removed", "COMPLETED");
             }
         }
         public void AddingProduct(string nameOfProduct, string priceOfProduct) 
@@ -145,19 +153,7 @@ namespace Project_PRG281
             }
         }
         
-        //public void RecordingShopSale(string theItems)
-        //{
-        //    var temporary = File.ReadAllLines(salesFilePath);
-        //    List<string> tuckshopSale = new List<string>(temporary);
-        //    tuckshopSale.Add(theItems);
-        //    File.WriteAllLines(salesFilePath, tuckshopSale);
-        //}
-        //public List<string> DisplayingShopSale()
-        //{
-        //    var temporary = File.ReadAllLines(salesFilePath);
-        //    List<string> tuckshopSale = new List<string>(temporary);
-        //    return tuckshopSale;
-        //}
+
 
 
         

@@ -1,0 +1,114 @@
+Small Chips, 11
+Medium Chips, 18
+Beef Burger, 30
+Beef Burger + Small Chips,40
+Beef Burger + Medium Chips,47
+Toasted Cheese,13
+Toasted Tomato + Cheese,18
+Toasted Ham + Cheese,22
+Braaibroodjie,20
+Toasted Chicken Mayo,26
+Chicken Strips, 28
+Chicken Strips + Small Chips,38
+Chicken Strips + Medium Chips,45
+Extra Cheese, 6
+Extra Meat,17
+Extra Ham,8
+440ml Assorted,16
+500ml Water,8
+500ml Flavoured Water,15
+Cappucino,17
+Red Cappucino,17
+Hot Chocolate,17
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]
+System.Collections.Generic.List`1[System.String]

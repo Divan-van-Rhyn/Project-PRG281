@@ -12,14 +12,16 @@ namespace Project_PRG281
     public partial class AddOrder : Form
     {
 
-        public int finalPrice;
+        public int finalPrice = 0;
         public List<string> receipt = new List<string>();
         public string salesFilePath = @"C:\Project PRG281\TextFiles\Sales.txt";
+        public string allSalesPath = @"C:\Project PRG281\TextFiles\AllSales.txt";
+
 
         public AddOrder()
         {
             InitializeComponent();
-            finalPrice = 0;
+            richTextBox1.SelectionTabs = new int[] { 100, 200, 300 };
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -45,16 +47,24 @@ namespace Project_PRG281
         private void butCheckout_Click(object sender, EventArgs e)
         {
             File.WriteAllText(salesFilePath, string.Empty);
-            using (StreamWriter writer = File.AppendText(salesFilePath))
+            // using (StreamWriter writer = File.AppendText(salesFilePath))
+            using (StreamWriter writer = new StreamWriter(salesFilePath, true))
             {
                 writer.WriteLine("------------------------------------------------------");
                 for (int i = 0; i < receipt.Count; i++)
                 {
                     string theProducts = (receipt[i]);
                     writer.WriteLine(theProducts);
+                    
                 }
+                writer.WriteLine(finalPrice.ToString());
                 writer.WriteLine("------------------------------------------------------");
             }
+
+            string content = File.ReadAllText(salesFilePath);
+            File.AppendAllText(allSalesPath, content);
+
+            MessageBox.Show("Checkout Succesfull", "SUCCESS");
             this.Close();
         }
 
@@ -72,13 +82,14 @@ namespace Project_PRG281
         {
             if (checkBox9.Checked)
             {
-                finalPrice = (int)(finalPrice + (40 * numericUpDown54.Value));
+                
                 numericUpDown54.Value++;
-                receipt.Add(checkBox1.Text + " " + label54.Text);
+                finalPrice = (int)(finalPrice + (40 * numericUpDown54.Value));
+                receipt.Add(checkBox1.Text + " " + label54.Text + "x" + numericUpDown54.Value.ToString());
             }
             else if (checkBox9.Checked == false)
             {
-                receipt.Remove(checkBox9.Text + " " + label74.Text);
+                receipt.Remove(checkBox9.Text + " " + label54.Text);
             }
         }
 
@@ -86,13 +97,14 @@ namespace Project_PRG281
         {
             if (checkBox1.Checked)
             {
-                finalPrice = (int)(finalPrice + (11 * numericUpDown40.Value));
+                
                 numericUpDown40.Value++;
-                receipt.Add(checkBox2.Text + " " + label40.Text);
+                finalPrice = (int)(finalPrice + (11 * numericUpDown40.Value));
+                receipt.Add(checkBox2.Text + " " + label40.Text + "x" + numericUpDown40.Value.ToString());
             }
             else if (checkBox1.Checked == false)
             {
-                receipt.Remove(checkBox1.Text + " " + label74.Text);
+                receipt.Remove(checkBox1.Text + " " + label40.Text);
             }
         }
 
@@ -100,13 +112,14 @@ namespace Project_PRG281
         {
             if (checkBox2.Checked)
             {
-                finalPrice = (int)(finalPrice + (18 * numericUpDown39.Value));
+               
                 numericUpDown39.Value++;
-                receipt.Add(checkBox2.Text + " " + label39.Text);
+                finalPrice = (int)(finalPrice + (18 * numericUpDown39.Value));
+                receipt.Add(checkBox2.Text + " " + label39.Text + "x" + numericUpDown39.Value.ToString());
             }
             else if (checkBox2.Checked == false)
             {
-                receipt.Remove(checkBox2.Text + " " + label74.Text);
+                receipt.Remove(checkBox2.Text + " " + label39.Text);
             }
         }
 
@@ -114,13 +127,14 @@ namespace Project_PRG281
         {
             if (checkBox3.Checked)
             {
-                finalPrice = (int)(finalPrice + (13 * numericUpDown49.Value));
+               
                 numericUpDown49.Value++;
-                receipt.Add(checkBox3.Text + " " + label49.Text);
+                finalPrice = (int)(finalPrice + (13 * numericUpDown49.Value));
+                receipt.Add(checkBox3.Text + " " + label49.Text + "x" + numericUpDown49.Value.ToString());
             }
             else if (checkBox3.Checked == false)
             {
-                receipt.Remove(checkBox3.Text + " " + label74.Text);
+                receipt.Remove(checkBox3.Text + " " + label49.Text);
             }
         }
 
@@ -128,13 +142,14 @@ namespace Project_PRG281
         {
             if (checkBox4.Checked)
             {
-                finalPrice = (int)(finalPrice + (18 * numericUpDown48.Value));
+                
                 numericUpDown48.Value++;
-                receipt.Add(checkBox4.Text + " " + label48.Text);
+                finalPrice = (int)(finalPrice + (18 * numericUpDown48.Value));
+                receipt.Add(checkBox4.Text + " " + label48.Text + "x" + numericUpDown48.Value.ToString());
             }
             else if (checkBox4.Checked == false)
             {
-                receipt.Remove(checkBox4.Text + " " + label74.Text);
+                receipt.Remove(checkBox4.Text + " " + label48.Text);
             }
         }
 
@@ -142,13 +157,14 @@ namespace Project_PRG281
         {
             if (checkBox5.Checked)
             {
-                finalPrice = (int)(finalPrice + (22 * numericUpDown47.Value));
+               
                 numericUpDown47.Value++;
-                receipt.Add(checkBox5.Text + " " + label47.Text);
+                finalPrice = (int)(finalPrice + (22 * numericUpDown47.Value));
+                receipt.Add(checkBox5.Text + " " + label47.Text + "x" + numericUpDown47.Value.ToString());
             }
             else if (checkBox5.Checked == false)
             {
-                receipt.Remove(checkBox5.Text + " " + label74.Text);
+                receipt.Remove(checkBox5.Text + " " + label47.Text);
             }
         }
 
@@ -156,13 +172,14 @@ namespace Project_PRG281
         {
             if (checkBox6.Checked)
             {
-                finalPrice = (int)(finalPrice + (20 * numericUpDown45.Value));
+               
                 numericUpDown45.Value++;
-                receipt.Add(checkBox6.Text + " " + label45.Text);
+                finalPrice = (int)(finalPrice + (20 * numericUpDown45.Value));
+                receipt.Add(checkBox6.Text + " " + label45.Text + "x" + numericUpDown45.Value.ToString());
             }
             else if (checkBox6.Checked == false)
             {
-                receipt.Remove(checkBox6.Text + " " + label74.Text);
+                receipt.Remove(checkBox6.Text + " " + label45.Text);
             }
         }
 
@@ -170,13 +187,14 @@ namespace Project_PRG281
         {
             if (checkBox7.Checked)
             {
-                finalPrice = (int)(finalPrice + (26 * numericUpDown44.Value));
+                
                 numericUpDown44.Value++;
-                receipt.Add(checkBox7.Text + " " + label44.Text);
+                finalPrice = (int)(finalPrice + (26 * numericUpDown44.Value));
+                receipt.Add(checkBox7.Text + " " + label44.Text + "x" + numericUpDown44.Value.ToString());
             }
             else if (checkBox7.Checked == false)
             {
-                receipt.Remove(checkBox7.Text + " " + label74.Text);
+                receipt.Remove(checkBox7.Text + " " + label44.Text);
             }
         }
 
@@ -184,13 +202,14 @@ namespace Project_PRG281
         {
             if (checkBox8.Checked)
             {
-                finalPrice = (int)(finalPrice + (30 * numericUpDown55.Value));
+               
                 numericUpDown55.Value++;
-                receipt.Add(checkBox8.Text + " " + label55.Text);
+                finalPrice = (int)(finalPrice + (30 * numericUpDown55.Value));
+                receipt.Add(checkBox8.Text + " " + label55.Text + "x" + numericUpDown55.Value.ToString());
             }
             else if (checkBox8.Checked == false)
             {
-                receipt.Remove(checkBox8.Text + " " + label74.Text);
+                receipt.Remove(checkBox8.Text + " " + label55.Text);
             }
         }
 
@@ -198,13 +217,14 @@ namespace Project_PRG281
         {
             if (checkBox10.Checked)
             {
-                finalPrice = (int)(finalPrice + (47 * numericUpDown53.Value));
+               
                 numericUpDown53.Value++;
-                receipt.Add(checkBox10.Text + " " + label53.Text);
+                finalPrice = (int)(finalPrice + (47 * numericUpDown53.Value));
+                receipt.Add(checkBox10.Text + " " + label53.Text + "x" + numericUpDown53.Value.ToString());
             }
             else if (checkBox10.Checked == false)
             {
-                receipt.Remove(checkBox10.Text + " " + label74.Text);
+                receipt.Remove(checkBox10.Text + " " + label53.Text);
             }
         }
 
@@ -217,13 +237,14 @@ namespace Project_PRG281
         {
             if (checkBox11.Checked)
             {
-                finalPrice = (int)(finalPrice + (28 * numericUpDown62.Value));
+               
                 numericUpDown62.Value++;
-                receipt.Add(checkBox11.Text + " " + label62.Text);
+                finalPrice = (int)(finalPrice + (28 * numericUpDown62.Value));
+                receipt.Add(checkBox11.Text + " " + label62.Text + "x" + numericUpDown62.Value.ToString());
             }
             else if (checkBox11.Checked == false)
             {
-                receipt.Remove(checkBox11.Text + " " + label74.Text);
+                receipt.Remove(checkBox11.Text + " " + label62.Text);
             }
         }
 
@@ -231,13 +252,14 @@ namespace Project_PRG281
         {
             if (checkBox12.Checked)
             {
-                finalPrice = (int)(finalPrice + (38 * numericUpDown61.Value));
+                
                 numericUpDown61.Value++;
-                receipt.Add(checkBox12.Text + " " + label61.Text);
+                finalPrice = (int)(finalPrice + (38 * numericUpDown61.Value));
+                receipt.Add(checkBox12.Text + " " + label61.Text + "x" + numericUpDown61.Value.ToString());
             }
             else if (checkBox12.Checked == false)
             {
-                receipt.Remove(checkBox12.Text + " " + label74.Text);
+                receipt.Remove(checkBox12.Text + " " + label61.Text);
             }
         }
 
@@ -245,13 +267,14 @@ namespace Project_PRG281
         {
             if (checkBox13.Checked)
             {
-                finalPrice = (int)(finalPrice + (45 * numericUpDown60.Value));
+               
                 numericUpDown60.Value++;
-                receipt.Add(checkBox13.Text + " " + label60.Text);
+                finalPrice = (int)(finalPrice + (45 * numericUpDown60.Value));
+                receipt.Add(checkBox13.Text + " " + label60.Text + "x" + numericUpDown60.Value.ToString());
             }
             else if (checkBox13.Checked == false)
             {
-                receipt.Remove(checkBox13.Text + " " + label74.Text);
+                receipt.Remove(checkBox13.Text + " " + label60.Text);
             }
         }
 
@@ -259,13 +282,14 @@ namespace Project_PRG281
         {
             if (checkBox14.Checked)
             {
-                finalPrice = (int)(finalPrice + (6 * numericUpDown65.Value));
+                
                 numericUpDown65.Value++;
-                receipt.Add(checkBox14.Text + " " + label65.Text);
+                finalPrice = (int)(finalPrice + (6 * numericUpDown65.Value));
+                receipt.Add(checkBox14.Text + " " + label65.Text + "x" + numericUpDown65.Value.ToString());
             }
             else if (checkBox14.Checked == false)
             {
-                receipt.Remove(checkBox14.Text + " " + label74.Text);
+                receipt.Remove(checkBox14.Text + " " + label65.Text);
             }
         }
 
@@ -273,13 +297,14 @@ namespace Project_PRG281
         {
             if (checkBox15.Checked)
             {
-                finalPrice = (int)(finalPrice + (17 * numericUpDown64.Value));
+               
                 numericUpDown64.Value++;
-                receipt.Add(checkBox15.Text + " " + label64.Text);
+                finalPrice = (int)(finalPrice + (17 * numericUpDown64.Value));
+                receipt.Add(checkBox15.Text + " " + label64.Text + "x" + numericUpDown64.Value.ToString());
             }
             else if (checkBox15.Checked == false)
             {
-                receipt.Remove(checkBox15.Text + " " + label74.Text);
+                receipt.Remove(checkBox15.Text + " " + label64.Text);
             }
         }
 
@@ -287,13 +312,14 @@ namespace Project_PRG281
         {
             if (checkBox16.Checked)
             {
-                finalPrice = (int)(finalPrice + (8 * numericUpDown63.Value));
+                
                 numericUpDown63.Value++;
-                receipt.Add(checkBox16.Text + " " + label63.Text);
+                finalPrice = (int)(finalPrice + (8 * numericUpDown63.Value));
+                receipt.Add(checkBox16.Text + " " + label63.Text + "x" + numericUpDown63.Value.ToString());
             }
             else if (checkBox16.Checked == false)
             {
-                receipt.Remove(checkBox16.Text + " " + label74.Text);
+                receipt.Remove(checkBox16.Text + " " + label63.Text);
             }
         }
 
@@ -301,13 +327,14 @@ namespace Project_PRG281
         {
             if (checkBox17.Checked)
             {
-                finalPrice = (int)(finalPrice + (16 * numericUpDown73.Value));
+               
                 numericUpDown73.Value++;
-                receipt.Add(checkBox17.Text + " " + label73.Text);
+                finalPrice = (int)(finalPrice + (16 * numericUpDown73.Value));
+                receipt.Add(checkBox17.Text + " " + label73.Text + "x" + numericUpDown73.Value.ToString());
             }
             else if (checkBox17.Checked == false)
             {
-                receipt.Remove(checkBox17.Text + " " + label74.Text);
+                receipt.Remove(checkBox17.Text + " " + label73.Text);
             }
         }
 
@@ -315,13 +342,14 @@ namespace Project_PRG281
         {
             if (checkBox18.Checked)
             {
-                finalPrice = (int)(finalPrice + (8 * numericUpDown72.Value));
+               
                 numericUpDown72.Value++;
-                receipt.Add(checkBox18.Text + " " + label72.Text);
+                finalPrice = (int)(finalPrice + (8 * numericUpDown72.Value));
+                receipt.Add(checkBox18.Text + " " + label72.Text + "x" + numericUpDown72.Value.ToString());
             }
             else if (checkBox18.Checked == false)
             {
-                receipt.Remove(checkBox18.Text + " " + label74.Text);
+                receipt.Remove(checkBox18.Text + " " + label72.Text);
             }
         }
 
@@ -329,13 +357,14 @@ namespace Project_PRG281
         {
             if (checkBox19.Checked)
             {
-                finalPrice = (int)(finalPrice + (15 * numericUpDown71.Value));
+                
                 numericUpDown71.Value++;
-                receipt.Add(checkBox19.Text + " " + label71.Text);
+                finalPrice = (int)(finalPrice + (15 * numericUpDown71.Value));
+                receipt.Add(checkBox19.Text + " " + label71.Text + "x" + numericUpDown71.Value.ToString());
             }
             else if (checkBox19.Checked == false)
             {
-                receipt.Remove(checkBox19.Text + " " + label74.Text);
+                receipt.Remove(checkBox19.Text + " " + label71.Text);
             }
         }
 
@@ -343,13 +372,14 @@ namespace Project_PRG281
         {
             if (checkBox20.Checked)
             {
-                finalPrice = (int)(finalPrice + (17 * numericUpDown76.Value));
+                
                 numericUpDown76.Value++;
-                receipt.Add(checkBox20.Text + " " + label76.Text);
+                finalPrice = (int)(finalPrice + (17 * numericUpDown76.Value));
+                receipt.Add(checkBox20.Text + " " + label76.Text + "x" + numericUpDown76.Value.ToString());
             }
             else if (checkBox20.Checked == false)
             {
-                receipt.Remove(checkBox20.Text + " " + label74.Text);
+                receipt.Remove(checkBox20.Text + " " + label76.Text);
             }
         }
 
@@ -357,13 +387,14 @@ namespace Project_PRG281
         {
             if (checkBox21.Checked)
             {
-                finalPrice = (int)(finalPrice + (17 * numericUpDown75.Value));
+                
                 numericUpDown75.Value++;
-                receipt.Add(checkBox21.Text + " " + label75.Text);
+                finalPrice = (int)(finalPrice + (17 * numericUpDown75.Value));
+                receipt.Add(checkBox21.Text + " " + label75.Text + "x" + numericUpDown75.Value.ToString());
             }
             else if (checkBox21.Checked == false)
             {
-                receipt.Remove(checkBox21.Text + " " + label74.Text);
+                receipt.Remove(checkBox21.Text + " " + label75.Text);
             }
         }
 
@@ -371,9 +402,10 @@ namespace Project_PRG281
         {
             if (checkBox22.Checked)
             {
-                finalPrice = (int)(finalPrice + (17 * numericUpDown74.Value));
+                
                 numericUpDown74.Value++;
-                receipt.Add(checkBox22.Text + " " + label74.Text);
+                finalPrice = (int)(finalPrice + (17 * numericUpDown74.Value));
+                receipt.Add(checkBox22.Text + " " + label74.Text + "x" + numericUpDown74.Value.ToString());
             }
             else if (checkBox22.Checked == false)
             {
@@ -389,7 +421,9 @@ namespace Project_PRG281
             {
                 this.richTextBox1.AppendText(Environment.NewLine + receipt[i]);
             }
+            this.richTextBox1.AppendText(Environment.NewLine + "");
             this.richTextBox1.AppendText(Environment.NewLine + "R" + finalPrice.ToString());
+            butReview.Enabled = false;
         }
     }
 }

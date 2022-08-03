@@ -13,8 +13,7 @@ namespace Project_PRG281
     public partial class AddRemoveItem : Form
     {
 
-        
-
+       
         public AddRemoveItem()
         {
             InitializeComponent();        
@@ -28,8 +27,18 @@ namespace Project_PRG281
             {
                 this.richTextBox1.AppendText(Environment.NewLine + menuProducts[i]);
             }
-            
-            
+
+            List<string> updatedMenuList = File.ReadLines(productMenu.updatedDisplayProductPath).ToList();
+
+
+
+            using (StreamWriter writer = File.AppendText(@"C:\Project PRG281\TextFiles\BCMenu.txt"))
+            {
+                for (int i = 0; i < updatedMenuList.Count; i++)
+                {
+                    writer.WriteLine(updatedMenuList);
+                }
+            }
         }
         
         private void button1_Click(object sender, EventArgs e, string removeItem)
@@ -39,22 +48,37 @@ namespace Project_PRG281
 
         private void button4_Click(object sender, EventArgs e)
         {
+            richTextBox2.Clear();
+
             ProductMenu productMenu = new ProductMenu();
             string nameOfProduct = itemAddTextBox.Text;
             string priceOfProduct = priceTextBox.Text;
             productMenu.AddingProduct(nameOfProduct, priceOfProduct);
             productMenu.ExportText();
-            productMenu.ImportText();
+            //productMenu.ImportText();
 
-                List<string> addedProduct = File.ReadAllLines(productMenu.updatedDisplayProductPath).ToList();
+            //List<string> addedProduct = File.ReadAllLines(productMenu.updatedDisplayProductPath).ToList();
 
-            for (int i = 0; i < addedProduct.Count; i++)
+            //for (int i = 0; i < addedProduct.Count; i++)
+            //{
+            //    this.richTextBox2.AppendText(Environment.NewLine + addedProduct[i]);
+            //}
+
+            //productMenu.CombineTextFiles();
+
+            string content = File.ReadAllText(productMenu.addedfilePath);
+            File.AppendAllText(productMenu.updatedDisplayProductPath, content);
+
+            List<string> updatedMenu = File.ReadAllLines(productMenu.updatedDisplayProductPath).ToList();
+
+            for (int i = 0; i < updatedMenu.Count; i++)
             {
-                this.richTextBox2.AppendText(Environment.NewLine + addedProduct[i]);
+                this.richTextBox2.AppendText(Environment.NewLine + updatedMenu[i]);
             }
 
-            productMenu.CombineTextFiles();
 
+            itemAddTextBox.Clear();
+            priceTextBox.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -65,8 +89,10 @@ namespace Project_PRG281
         private void butRemove_Click(object sender, EventArgs e)
         {
             ProductMenu productMenu = new ProductMenu();
+
             string productName = itemRemoveTextBox.Text;
             productMenu.RemovingProduct(productName);
+
             itemAddTextBox.Clear();
             priceTextBox.Clear();
         }
@@ -97,6 +123,12 @@ namespace Project_PRG281
 
             ProductMenu productMenu = new ProductMenu();
             productMenu.UpdatingProductName(originalName, updatedPrice);
+        }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            butUpdatePrice.Enabled = true;
+            butUpdateName.Enabled = true;
         }
     }
 }

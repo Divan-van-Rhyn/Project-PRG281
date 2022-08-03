@@ -127,6 +127,7 @@ namespace Project_PRG281
             this.itemRemoveTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.itemRemoveTextBox.Location = new System.Drawing.Point(505, 584);
             this.itemRemoveTextBox.Name = "itemRemoveTextBox";
+            this.itemRemoveTextBox.PlaceholderText = "Product name";
             this.itemRemoveTextBox.Size = new System.Drawing.Size(243, 29);
             this.itemRemoveTextBox.TabIndex = 27;
             // 
@@ -155,13 +156,14 @@ namespace Project_PRG281
             this.itemAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.itemAddTextBox.Location = new System.Drawing.Point(505, 518);
             this.itemAddTextBox.Name = "itemAddTextBox";
+            this.itemAddTextBox.PlaceholderText = "Product name";
             this.itemAddTextBox.Size = new System.Drawing.Size(243, 29);
             this.itemAddTextBox.TabIndex = 40;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(1045, 511);
+            this.button4.Location = new System.Drawing.Point(1082, 511);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 41);
             this.button4.TabIndex = 38;
@@ -172,8 +174,9 @@ namespace Project_PRG281
             // priceTextBox
             // 
             this.priceTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceTextBox.Location = new System.Drawing.Point(794, 518);
+            this.priceTextBox.Location = new System.Drawing.Point(841, 518);
             this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.PlaceholderText = "Product price";
             this.priceTextBox.Size = new System.Drawing.Size(183, 29);
             this.priceTextBox.TabIndex = 42;
             // 
@@ -228,6 +231,7 @@ namespace Project_PRG281
             this.textUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUpdate.Location = new System.Drawing.Point(505, 654);
             this.textUpdate.Name = "textUpdate";
+            this.textUpdate.PlaceholderText = "Product name";
             this.textUpdate.Size = new System.Drawing.Size(243, 29);
             this.textUpdate.TabIndex = 48;
             // 
@@ -236,6 +240,7 @@ namespace Project_PRG281
             this.textPriceUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textPriceUpdate.Location = new System.Drawing.Point(505, 726);
             this.textPriceUpdate.Name = "textPriceUpdate";
+            this.textPriceUpdate.PlaceholderText = "Change price to";
             this.textPriceUpdate.Size = new System.Drawing.Size(243, 29);
             this.textPriceUpdate.TabIndex = 49;
             // 
@@ -244,6 +249,7 @@ namespace Project_PRG281
             this.textNameUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNameUpdate.Location = new System.Drawing.Point(505, 797);
             this.textNameUpdate.Name = "textNameUpdate";
+            this.textNameUpdate.PlaceholderText = "Change name to";
             this.textNameUpdate.Size = new System.Drawing.Size(243, 29);
             this.textNameUpdate.TabIndex = 50;
             // 
@@ -256,9 +262,11 @@ namespace Project_PRG281
             this.butSearch.TabIndex = 51;
             this.butSearch.Text = "Search";
             this.butSearch.UseVisualStyleBackColor = true;
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
             // 
             // butUpdatePrice
             // 
+            this.butUpdatePrice.Enabled = false;
             this.butUpdatePrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.butUpdatePrice.Location = new System.Drawing.Point(823, 720);
             this.butUpdatePrice.Name = "butUpdatePrice";
@@ -270,6 +278,7 @@ namespace Project_PRG281
             // 
             // butUpdateName
             // 
+            this.butUpdateName.Enabled = false;
             this.butUpdateName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.butUpdateName.Location = new System.Drawing.Point(823, 791);
             this.butUpdateName.Name = "butUpdateName";

@@ -14,7 +14,7 @@ namespace Project_PRG281
     public partial class DisplaySales : Form
     {
 
-        public string salesPath = @"C:\Project PRG281\TextFiles\Sales.txt";
+        public string salesPath = @"C:\Project PRG281\TextFiles\AllSales.txt";
         public string[] textFileSales;
 
         public DisplaySales()
