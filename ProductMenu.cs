@@ -97,19 +97,54 @@ namespace Project_PRG281
 
         public void RemovingProduct(string productNames)
         {
-            List<string> productList = File.ReadAllLines(updatedDisplayProductPath).ToList();
+            //AddRemoveItem addRemoveItem = new AddRemoveItem();
 
-            if ((productNames != null) || (productNames != ""))
-            {
-                int locating = productName.IndexOf(productNames);
-                productName.Remove(productNames);
-                //productPrice.RemoveAt(locating);
-                System.Windows.Forms.MessageBox.Show("Product has succesfully been removed", "COMPLETED");
-            }
-            else
-            {
-                System.Windows.Forms.MessageBox.Show("Product has unsuccesfully been removed", "COMPLETED");
-            }
+            //List<string> productList = File.ReadAllLines(updatedDisplayProductPath).ToList();
+
+            //if ((productNames != null) || (productNames != ""))
+            //{
+            //    int locating = productList.IndexOf(productNames);
+            //    productName.RemoveAt(locating);
+            //    productPrice.RemoveAt(locating);
+            //    System.Windows.Forms.MessageBox.Show("Product has succesfully been removed", "COMPLETED");
+            //}
+            //else
+            //{
+            //    System.Windows.Forms.MessageBox.Show("Product has unsuccesfully been removed", "COMPLETED");
+            //}
+
+            //string[] menuArray = System.IO.File.ReadAllLines(updatedDisplayProductPath);
+            //for (int i = 0; i < menuArray.Length; i++)
+            //{
+            //    if (menuArray[i] == (productNames + productPrice))
+            //    {
+            //        menuArray.splice(i);
+            //    }
+            //}
+
+            //menuArray = menuArray.Where(e => e != productNames).ToArray();
+            //Console.WriteLine(String.Join(",", menuArray));
+
+            //List<string> removedList = menuArray.ToList<string>();
+
+            //using (StreamWriter writer = File.AppendText(@"C:\Project PRG281\TextFiles\UpdatedMenu.txt"))
+            //{
+            //    for (int i = 0; i < removedList.Count; i++)
+            //    {
+            //        writer.WriteLine(removedList[i]);
+            //    }
+            //}
+
+            //System.Windows.Forms.MessageBox.Show("Product has succesfully been removed", "COMPLETED");
+
+
+            var oldLines = System.IO.File.ReadAllLines(updatedDisplayProductPath);
+            var newLines = oldLines.Where(line => !line.Contains(productNames));
+            System.IO.File.WriteAllLines(updatedDisplayProductPath, newLines);
+            FileStream obj = new FileStream(updatedDisplayProductPath, FileMode.Append);
+            obj.Close();
+
+
         }
         public void AddingProduct(string nameOfProduct, string priceOfProduct) 
         {
@@ -140,7 +175,7 @@ namespace Project_PRG281
                 }
                 catch(Exception)
                 {
-                    System.Windows.Forms.MessageBox.Show("Product not found!","ERROR!");
+                    System.Windows.Forms.MessageBox.Show("Item not found!","ERROR!");
                 }
             }
         }

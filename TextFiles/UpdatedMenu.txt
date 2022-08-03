@@ -17,7 +17,6 @@ Extra Ham,8
 440ml Assorted,16
 500ml Water,8
 500ml Flavoured Water,15
-Cappucino,17
-Red Cappucino,17
 Hot Chocolate,17
-Pizza,30Pizza,15
+
+Americano, 12

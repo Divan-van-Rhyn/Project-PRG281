@@ -33,17 +33,7 @@ namespace Project_PRG281
             
         }
       
-        //private void butLogIn_Click(object sender, EventArgs e)
-        //{
 
- 
-        //    }
-
-            
-
-
-
-        //}
 
         private void butCancel_Click(object sender, EventArgs e)
         {
@@ -66,7 +56,7 @@ namespace Project_PRG281
                     if (usernameText == LoginDet[r, 0] && passwordText == LoginDet[r, 1])
                     {
                         proceed = true;
-                        MessageBox.Show("Welcome " + LoginDet[r, 0], "SUCCESSFUL"  );
+                       // MessageBox.Show("Welcome " + LoginDet[r, 0], "SUCCESSFUL"  );
                         Menu MainMenuForm = new Menu();
                         this.Hide();
 

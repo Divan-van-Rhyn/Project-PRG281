@@ -51,7 +51,6 @@ namespace Project_PRG281
             this.textPriceUpdate = new System.Windows.Forms.TextBox();
             this.textNameUpdate = new System.Windows.Forms.TextBox();
             this.butSearch = new System.Windows.Forms.Button();
-            this.butUpdatePrice = new System.Windows.Forms.Button();
             this.butUpdateName = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -210,7 +209,7 @@ namespace Project_PRG281
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(283, 734);
+            this.label4.Location = new System.Drawing.Point(283, 800);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 21);
             this.label4.TabIndex = 46;
@@ -220,7 +219,7 @@ namespace Project_PRG281
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(283, 805);
+            this.label5.Location = new System.Drawing.Point(283, 729);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 21);
             this.label5.TabIndex = 47;
@@ -238,7 +237,7 @@ namespace Project_PRG281
             // textPriceUpdate
             // 
             this.textPriceUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textPriceUpdate.Location = new System.Drawing.Point(505, 726);
+            this.textPriceUpdate.Location = new System.Drawing.Point(505, 797);
             this.textPriceUpdate.Name = "textPriceUpdate";
             this.textPriceUpdate.PlaceholderText = "Change price to";
             this.textPriceUpdate.Size = new System.Drawing.Size(243, 29);
@@ -247,7 +246,7 @@ namespace Project_PRG281
             // textNameUpdate
             // 
             this.textNameUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNameUpdate.Location = new System.Drawing.Point(505, 797);
+            this.textNameUpdate.Location = new System.Drawing.Point(505, 726);
             this.textNameUpdate.Name = "textNameUpdate";
             this.textNameUpdate.PlaceholderText = "Change name to";
             this.textNameUpdate.Size = new System.Drawing.Size(243, 29);
@@ -263,18 +262,6 @@ namespace Project_PRG281
             this.butSearch.Text = "Search";
             this.butSearch.UseVisualStyleBackColor = true;
             this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
-            // 
-            // butUpdatePrice
-            // 
-            this.butUpdatePrice.Enabled = false;
-            this.butUpdatePrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butUpdatePrice.Location = new System.Drawing.Point(823, 720);
-            this.butUpdatePrice.Name = "butUpdatePrice";
-            this.butUpdatePrice.Size = new System.Drawing.Size(132, 39);
-            this.butUpdatePrice.TabIndex = 52;
-            this.butUpdatePrice.Text = "Update";
-            this.butUpdatePrice.UseVisualStyleBackColor = true;
-            this.butUpdatePrice.Click += new System.EventHandler(this.butUpdatePrice_Click);
             // 
             // butUpdateName
             // 
@@ -294,7 +281,6 @@ namespace Project_PRG281
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 1041);
             this.Controls.Add(this.butUpdateName);
-            this.Controls.Add(this.butUpdatePrice);
             this.Controls.Add(this.butSearch);
             this.Controls.Add(this.textNameUpdate);
             this.Controls.Add(this.textPriceUpdate);
@@ -350,7 +336,6 @@ namespace Project_PRG281
         private System.Windows.Forms.TextBox textPriceUpdate;
         private System.Windows.Forms.TextBox textNameUpdate;
         private System.Windows.Forms.Button butSearch;
-        private System.Windows.Forms.Button butUpdatePrice;
         private System.Windows.Forms.Button butUpdateName;
     }
 }

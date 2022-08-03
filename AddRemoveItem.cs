@@ -36,7 +36,7 @@ namespace Project_PRG281
             {
                 for (int i = 0; i < updatedMenuList.Count; i++)
                 {
-                    writer.WriteLine(updatedMenuList);
+                    writer.WriteLine(updatedMenuList[i]);
                 }
             }
         }
@@ -93,8 +93,14 @@ namespace Project_PRG281
             string productName = itemRemoveTextBox.Text;
             productMenu.RemovingProduct(productName);
 
-            itemAddTextBox.Clear();
-            priceTextBox.Clear();
+            List<string> updatedMenu = File.ReadAllLines(productMenu.updatedDisplayProductPath).ToList();
+
+            for (int i = 0; i < updatedMenu.Count; i++)
+            {
+                this.richTextBox2.AppendText(Environment.NewLine + updatedMenu[i]);
+            }
+
+            itemRemoveTextBox.Clear();
         }
 
         private void AddRemoveItem_Load(object sender, EventArgs e)
@@ -109,11 +115,30 @@ namespace Project_PRG281
 
         private void butUpdateName_Click(object sender, EventArgs e)
         {
-            string originalName = textUpdate.Text;
-            string updatedName = textNameUpdate.Text;
-
             ProductMenu productMenu = new ProductMenu();
-            productMenu.UpdatingProductName(originalName, updatedName);
+
+            if (textNameUpdate == null || textPriceUpdate == null)
+            {
+                MessageBox.Show("One or more fields have not been filled in", "ERROR");
+            }
+            else
+            {
+                FileInfo file = new FileInfo(productMenu.updatedDisplayProductPath);
+                using (StreamWriter writer = file.AppendText())
+                {
+                    writer.WriteLine(textNameUpdate.Text + ", " + textPriceUpdate.Text);
+                }
+
+                MessageBox.Show("Product has succesfully been updated", "SUCCESS");
+            }
+
+            //string originalName = textUpdate.Text;
+            //string updatedName = textNameUpdate.Text;
+
+            
+
+           
+            //productMenu.UpdatingProductName(originalName, updatedName);
         }
 
         private void butUpdatePrice_Click(object sender, EventArgs e)
@@ -122,12 +147,30 @@ namespace Project_PRG281
             string updatedPrice = textPriceUpdate.Text;
 
             ProductMenu productMenu = new ProductMenu();
-            productMenu.UpdatingProductName(originalName, updatedPrice);
+            //productMenu.UpdatingProductName(originalName, updatedPrice);
         }
 
         private void butSearch_Click(object sender, EventArgs e)
         {
-            butUpdatePrice.Enabled = true;
+            ProductMenu productMenu = new ProductMenu();
+
+            try
+            {
+                var oldLines = System.IO.File.ReadAllLines(productMenu.updatedDisplayProductPath);
+                var newLines = oldLines.Where(line => !line.Contains(textUpdate.Text));
+                System.IO.File.WriteAllLines(productMenu.updatedDisplayProductPath, newLines);
+                FileStream obj = new FileStream(productMenu.updatedDisplayProductPath, FileMode.Append);
+                obj.Close();
+
+
+            }
+            catch 
+            {
+                MessageBox.Show("Item not found", "ERROR");
+            }
+            
+
+
             butUpdateName.Enabled = true;
         }
     }
